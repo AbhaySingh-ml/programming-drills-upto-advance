@@ -318,13 +318,30 @@ Example: Input: 6 → Output: 4 (1, 2, 3, 6)
 # num = 6
 # print("Total number of factors:", count_factors(num))  # Output: 4
 
-'''
+'''Done
 Q17. Generate Fibonacci Series (n terms)
 Print the first n terms of the Fibonacci series.
 Example: Input: 5 → Output: 0 1 1 2 3
 '''
+# class solution:
+#     def fibonacci(self, n:int):
+#         a, b = 0, 1
+#         for _ in range(n):
+#             print(a, end=' ')
+#             a, b = a, a + b
 
-            
+# check = solution()
+# print(check.fibonacci(5))
+# class Solution:
+#     def fibonacci_series(self, n: int):
+#         a, b = 0, 1  # First two terms of the series
+#         for _ in range(n):
+#             print(a, end=' ')  # Print the current term
+#             a, b = b, a + b     # Update the terms for next iteration
+
+# # Example usage
+# s = Solution()
+# s.fibonacci_series(5)  # Output: 0 1 1 2 3
 
 '''
 Q18. Check if Number is Strong
@@ -470,100 +487,269 @@ Q27. Print Number in Words
 Print each digit of the number in words.
 Example: Input: 123 → Output: One Two Three
 '''
-class solution:
-    def num_in_words(self, num:int):
-        if num == 0:
-            print ("Zero")
-        while num > 0:
+# class solution:
+#     def num_in_words(self, num:int):
+#         if num == 0:
+#             print ("Zero")
+#         while num > 0:
             
 
-'''
+'''Done
 Q28. Find Power Without Using ** or pow()
 Calculate the power of a number without using ** or pow().
 Example: Input: 2, 3 → Output: 8
 ''' 
+# class solution:
+#     def power(self, a: int, b:int):
+#         while a > 0:
+#             a *= b #a should be mulitplied by b times
+# class solution:
+#     def power(self, a: int, b:int):
+#         result = 1
+#         for _ in range(b):
+#             result *=a
+#         return result
+# check = solution()
+# print(check.power(2, 3))
 
-'''
+
+'''Repeat
 Q29. Print All Prime Numbers Up to N
 Print all prime numbers up to a given number N.
 Example: Input: 10 → Output: 2, 3, 5, 7
 '''
+# class solution:
+#     def prime(self, n:int):
+#         for num in range(n):
+#             is_prime = True
+        
+#         for i in range(2, int(num **0.5)+1):
+#             if num % i == 0:
+#                 is_prime = False
+#                 break
+#         if is_prime:
+#             print(num, end =' ')
 
 '''
 Q30. Check if Digits Are in Increasing Order
 Check if the digits of the number are in strictly increasing order.
 Example: Input: 1234 → Output: True; Input: 1324 → Output: False
 '''
-'''
+# class Solution:
+#     def increasing(self, num: int) -> bool:
+#         num_str = str(num)  # convert number to string
+#         for i in range(len(num_str) - 1):  # loop over digits
+#             if num_str[i] >= num_str[i + 1]:  # check increasing order
+#                 return False
+#         return True
+
+# # Example usage
+# s = Solution()
+# print(s.increasing(1234))  # True
+# print(s.increasing(1324))  # False
+# print(s.increasing(789))   # True
+# print(s.increasing(987))   # False
+
+'''Done
 Q31. Find Product of Digits
 Return the product of all digits in a number.
-Example: Input: 1234 → Output: 24 (123*4)
+Example: Input: 1234 → Output: 24 (1 *2 *3 *4)
 '''
+# class Solution:
+#     def product(self, num:int):
+#         if num == 0:
+#             return 0
+#         Pro = 1
+#         while num > 0:
+#             digit = num % 10
+#             num = num // 10
+#             Pro *= digit 
+#         return Pro
+# check = Solution()
+# print(check.product(1234))
 '''
 Q32. Count Frequency of Each Digit
 Count how many times each digit appears in the number.
 Example: Input: 112232 → Output: 1=2, 2=3, 3=1
 '''
-'''
+# class solution:
+#     def digit_fre(self, num: int):
+#         freq = {} #made a dict to store the value and occurance
+#         for digit in str(num):
+#             if digit in freq:
+#                 digit[freq] +=1
+#             else:
+#                 freq[digit] =1
+#         for digit in sorted(freq.keys()):
+#             print(f"{digit}={freq[digit]}", end=", ")
+
+'''Done
 Q33. Check if Number is Armstrong
 Check if a number is equal to the sum of the cubes of its digits.
 Example: Input: 153 → Output: True (1³ + 5³ + 3³ = 153)
 '''
+# class solution:
+#     def armstrong(self, num:int):
+#         original_num = num
+#         sum_of_cube = 0 
+#         while num > 0:
+#             digit = num % 10
+#             num = num // 10
+#             cube = digit * digit * digit
+#             sum_of_cube +=cube
+#         return original_num == sum_of_cube
+
+
 '''
 Q34. Rotate Digits of a Number (Right Rotation by 2)
 Rotate the digits of a number to the right by 2 places.
 Example: Input: 12345 → Output: 45123
 '''
+# class solution:
+#     def digit_rotation(self, num:int):
+#         str_num = str(num)
+#         if len(str_num)<=2:
+#             return num
+#         Rotated_num = str_num[-2:] + str_num[:-2]
+#         return int(Rotated_num)
+
 '''
 Q35. Convert Binary to Decimal
 Convert a binary number (as integer input) to its decimal form.
 Example: Input: 1010 → Output: 10
 '''
-'''
+
+'''Done
 Q36. Convert Decimal to Binary
 Convert a decimal number to binary (without using bin()).
 Example: Input: 10 → Output: 1010
 '''
+# class solution:
+#     def convert(self, num:int):  
+#         if num == 0:
+#             return "0"
+#         binary_digit = []
+#         while num > 0:
+#             # digit = num % 10
+#             reminder = num % 2
+#             binary_digit.append(str(reminder))
+#             num = num // 2
+#         binary_digit.reverse()               # Reverse to get correct order
+#         return ''.join(binary_digit) 
+
+        
 '''
 Q37. Reverse Binary Representation
 Reverse the binary digits of a number.
 Example: Input: 6 (110) → Output: 011 → 3
 '''
+# So the process is: Decimal → Binary → Reverse Binary → Decimal
+
 '''
 Q38. Find Second Largest Digit in a Number
 Return the second largest digit from the number.
 Example: Input: 4723 → Output: 4
 '''
-'''
+# class solution:
+#     def sec_largest(self, num:int):
+#         digits = []
+
+#         while num > 0:
+#             digit = num % 10
+#             digits.append(digit)
+#             num = num // 10
+#         Unique_digits = list(set(digits))
+#         Unique_digits.sort(digit)
+
+#         if len(Unique_digits) < 2:
+#             return -1
+#         else:
+#             return Unique_digits[1]
+
+'''Done
 Q39. Sum of All Prime Digits
 Add only the prime digits in the number.
 Example: Input: 2379 → Output: 2+3+7 = 12
 '''
-'''
+# class solution:
+#     def add_prime(self, num:int):
+#         add_prime = 0
+#         while num > 0:
+#             digit = num % 10
+#             if digit in (2,3,5,7):
+#                 add_prime +=digit
+#             num = num // 10
+#         return add_prime
+
+'''Done
 Q40. Check if Number is Duck Number
 Check if a number contains at least one zero but does not begin with zero.
 Example: Input: 1023 → Output: True; Input: 0123 → Output: False
 '''
-'''
+# class solution:
+#     def duck_num(self, num:str):
+#         if num[0] == '0':
+#             return False
+#         return 0 in num[1:]
+'''DOne
 Q41. Check if Number is Magic Number
 Magic number = recursively add digits until you get 1.
 Example: Input: 199 → 1+9+9=19 → 1+9=10 → 1+0=1 → Output: True
 '''
-'''
+# class solution:
+#     def magic_num(self, num:int) ->bool:
+#         def sum_of_num(self, n:int) ->int:
+#             total = 0
+#             while num>0:
+#                 total += n % 10
+#                 n = n // 10
+#             return total
+#         while num > 10:
+#             num = sum_of_num(num)
+#         return num == 1
+'''Done
 Q42. Print All Divisors of a Number in Sorted Order
 List all divisors of the given number.
 Example: Input: 12 → Output: 1 2 3 4 6 12
 '''
-'''
+class solution:
+    def divisors(self, num:int):
+        list_of_div = []
+        if num == 0:
+            return "Undefine"
+        for i in range(1, num+1):
+            if num % i == 0:
+                list_of_div.append(i)
+        return list_of_div
+check = solution()
+print(check.divisors(6))
+
+'''Done
 Q43. Find the Sum of Factorials of Even Digits Only
 Only add factorials of even digits.
 Example: Input: 2483 → Output: 2! + 4! + 8! = 2 + 24 + 40320 = 40346
 '''
+class solution:
+    def factorial(self, num:int)->int:
+        even_digit = 0
+        while num > 0:
+            digit = num % 10
+            if digit % 2 == 0:
+                fact = 1
+                for i in range(1, digit + 1):
+                    fact *= i
+                even_digit += fact   # ✅ after factorial loop
+            num = num // 10          # ✅ after processing the digit
+
+
+
+
 '''
 Q44. Reverse a Number Without Converting to String
 Reverse the digits using only math operations.
 Example: Input: 1234 → Output: 4321
 '''
+
 '''
 Q45. Replace All Zeros with Fives
 Convert every 0 in a number to 5.
