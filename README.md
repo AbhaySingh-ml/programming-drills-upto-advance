@@ -1,4 +1,4 @@
-# rogramming-drills
+# Programming-drills
 # 🧠 Programming Drills – Custom Python Practice
 
 This repository contains a single Jupyter notebook (`drills.ipynb`) featuring a series of custom-designed programming drill questions and solutions written in Python.
