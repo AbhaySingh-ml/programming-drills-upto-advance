@@ -1,7 +1,7 @@
 # Programming-drills
 # 🧠 Programming Drills – Custom Python Practice
 
-T repository contains a single Jupyter notebook (`drills.ipynb`) featuring a series of custom-designed programming drill questions and solutions written in Python.
+Trepository contains a single Jupyter notebook (`drills.ipynb`) featuring a series of custom-designed programming drill questions and solutions written in Python.
 
 These questions are designed by me (Abhay) to build strong programming logic and prepare for LeetCode Easy/Medium-level problems.
 
